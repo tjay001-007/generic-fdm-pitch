@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>ALEDA.ac</path>
+  <offsets>
+    <pitch-deg>0</pitch-deg>   
+    <heading-deg>0</heading-deg>
+    <roll-deg>270</roll-deg>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+  </offsets>
+
+
+ <animation>
+   <type>rotate</type>
+   <object-name>R_Elevon</object-name>
+   <expression>
+    <clip>
+     <sum>
+      <product>
+        <sum>
+        <product>
+          <property>surface-positions/right-aileron-pos-norm</property>
+          <value> -0.5 </value>
+        </product>
+        <product>
+          <property>surface-positions/elevator-pos-norm</property>
+          <value> 0.5 </value>
+        </product>
+        </sum>
+        <value> 30 </value>
+      </product>
+      <value> 0 </value>
+     </sum>
+     <clipMin>-30</clipMin>
+     <clipMax>30</clipMax>
+    </clip>
+   </expression>
+   <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+   </axis>
+  <center>
+   <x-m> 3.5781</x-m>
+   <y-m>0.014315</y-m>
+   <z-m>0.73093</z-m>
+  </center>
+ </animation>   
+
+ <animation>
+   <type>rotate</type>
+   <object-name>L_Elevon</object-name>
+   <expression>
+    <clip>
+     <sum>
+      <product>
+        <sum>
+        <product>
+          <property>surface-positions/left-aileron-pos-norm</property>
+          <value> 0.5 </value>
+        </product>
+        <product>
+          <property>surface-positions/elevator-pos-norm</property>
+          <value> 0.5 </value>
+        </product>
+        </sum>
+        <value> 30 </value>
+      </product>
+      <value> 0 </value>
+     </sum>
+     <clipMin>-30</clipMin>
+     <clipMax>30</clipMax>
+    </clip>
+   </expression>
+   <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+   </axis>
+  <center>
+   <x-m> 3.5781</x-m>
+   <y-m> 0.017022</y-m>
+   <z-m>-0.75585</z-m>
+  </center>
+ </animation>  
+
+ <animation>
+   <object-name>L_Winglet</object-name>
+   <type>rotate</type>
+   <property>surface-positions/rudder-pos-norm</property>
+   <factor> -15 </factor>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0.1</z>
+   </axis>
+  <center>
+   <x-m> 4.0544</x-m>
+   <y-m>-0.025153</y-m>
+   <z-m>-1.1187</z-m>
+  </center>
+ </animation>  
+
+ <animation>
+   <object-name>R_Winglet</object-name>
+   <type>rotate</type>
+   <property>surface-positions/rudder-pos-norm</property>
+   <factor> -15 </factor>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>-0.1</z>
+   </axis>
+  <center>
+   <x-m> 4.0544</x-m>
+   <y-m> -0.032951</y-m>
+   <z-m> 1.1216</z-m>
+  </center>
+ </animation>  
+
+ 
+<!-- <animation>
+  <object-name>MLG</object-name>
+  <type>rotate</type>
+  <expression>
+    <product>
+     <sum>
+      <value> -1 </value>
+      <property>gear/gear/position-norm</property>
+     </sum>
+     <value> -90 </value>
+    </product>
+  </expression>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+  <center>
+   <x-m> 2.7773</x-m>
+   <y-m> 0.403056 m</y-m>
+   <z-m> 0.014487</z-m>
+  </center>
+ </animation> -->
+
+<animation>
+  <object-name>MLG</object-name>
+  <type>blend</type>
+  <expression>
+   <sum>
+    <value> 1 </value>
+     <product>
+      <value> -1 </value>
+      <property>gear/gear[1]/position-norm</property>
+     </product>
+    </sum>
+  </expression>
+  <factor>1</factor>
+ </animation>
+
+
+<!--  <animation>
+  <object-name>MLG</object-name>
+  <type>translate</type>
+  <axis>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>5.0</z-m>
+  </axis>
+  <property>gear/gear/position-norm</property>
+</animation> -->
+
+
+<animation>
+  <object-name>FLG</object-name>
+  <type>blend</type>
+  <expression>
+   <sum>
+    <value> 1 </value>
+     <product>
+      <value> -1 </value>
+      <property>gear/gear[1]/position-norm</property>
+     </product>
+    </sum>
+  </expression>
+  <factor>1</factor>
+ </animation>
+
+
+<animation>
+  <object-name>FLG</object-name>
+  <type>rotate</type>
+  <property>gear/gear/steering-norm</property>
+  <factor>10</factor>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+  <center>
+   <x-m> 0.88947</x-m>
+   <y-m>0.007144</y-m>
+   <z-m>-0.001102</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <object-name>FLG</object-name>
+  <type>rotate</type>
+  <expression>
+    <product>
+     <sum>
+      <value> -1 </value>
+      <property>gear/gear/position-norm</property>
+     </sum>
+     <value> -90 </value>
+    </product>
+  </expression>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+  <center>
+   <x-m> 0.88947</x-m>
+   <y-m>0.007144</y-m>
+   <z-m>-0.001102</z-m>
+  </center>
+ </animation>
+
+</PropertyList>

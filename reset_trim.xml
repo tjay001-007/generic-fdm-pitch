@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<initialize name="Start up location">
+  <latitude unit="DEG" type="geodetic"> 54.153565 </latitude>
+  <longitude unit="DEG"> 13.780000 </longitude>
+  <altitude unit="M"> 100.0 </altitude>
+  <vt unit="KTS"> 80.5 </vt>
+  <gamma unit="DEG"> 0.0 </gamma>
+  <phi unit="DEG"> 0.0 </phi>
+  <theta unit="DEG"> 6.0 </theta>  
+  <psi unit="DEG"> -46.000004 </psi>
+</initialize>
